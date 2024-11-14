@@ -9,6 +9,10 @@ app.use(express.urlencoded({ extended: true }));
 
 const MongoClient = require('mongodb').MongoClient;
 
+MongoClient.connect('mongodb-connection-string', (err, client) => {
+    
+})
+
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
