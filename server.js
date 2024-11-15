@@ -13,6 +13,7 @@ MongoClient.connect('mongodb+srv://djsmacker01:Fabulous01@cluster0.amspanf.mongo
     .then(client => {
          console.log('Connected to Database....')
         const db = client.db('star-wars-quotes')
+        const quotesCollection = db.collection('quotes')
         
      app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
