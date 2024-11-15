@@ -23,7 +23,8 @@ MongoClient.connect('mongodb+srv://djsmacker01:Fabulous01@cluster0.amspanf.mongo
 
 app.post('/quotes', (req, res) => { 
     console.log(req.body)
-    quotesCollection.insertOne(req.body)
+    quotesCollection
+        .insertOne(req.body)
         .then(result => {
         console.log(result)
         })
