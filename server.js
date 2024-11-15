@@ -9,10 +9,14 @@ app.use(express.urlencoded({ extended: true }));
 
 const MongoClient = require('mongodb').MongoClient;
 
-MongoClient.connect('mongodb+srv://djsmacker01:Fabulous01@cluster0.amspanf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').then(
-    console.log('Connected to Database....')
-
-).catch(error=>console.error(error))
+MongoClient.connect('mongodb+srv://djsmacker01:Fabulous01@cluster0.amspanf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+    .then(client => {
+         console.log('Connected to Database....')
+         const db  = client.db('star-wars-quotes')
+    }
+   
+)
+// .catch (error=> console.error(error))
 
 
 
