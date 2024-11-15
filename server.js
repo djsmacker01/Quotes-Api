@@ -26,10 +26,7 @@ app.post('/quotes', (req, res) => {
 app.listen(PORT, () => { 
     console.log(`Server is running at http://localhost:${PORT}`);
 });
-    }
-   
-)
-// .catch (error=> console.error(error))
+    }).catch (error=> console.error(error))
 
 
 
