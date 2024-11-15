@@ -26,6 +26,7 @@ app.post('/quotes', (req, res) => {
     quotesCollection
         .insertOne(req.body)
         .then(result => {
+            res.redirect('/')
         console.log(result)
         })
     .catch(err => {console.error(err)});
