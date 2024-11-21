@@ -31,17 +31,7 @@ MongoClient.connect('mongodb+srv://djsmacker01:Fabulous01@cluster0.amspanf.mongo
             // res.sendFile(__dirname + '/index.html');
         })
         
-//         app.get('/', () => {
-//             db.collection('quotes')
-//                 .find()
-//                 .toArray()
-//                 .then(result => {
-//                     console.log(result);
-//                 })
-//             .catch(err => console.error(err))
-// })        
-
-
+      
 app.post('/quotes', (req, res) => { 
     console.log(req.body)
     quotesCollection
