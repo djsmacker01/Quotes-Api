@@ -40,7 +40,7 @@ app.post('/quotes', (req, res) => {
             res.redirect('/')
         console.log(result)
         })
-    .catch(err => {console.error(err)});
+    .catch(error => {console.error(error)});
 })
         
 app.listen(PORT, () => { 
