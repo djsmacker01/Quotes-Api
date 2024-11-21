@@ -24,11 +24,11 @@ MongoClient.connect('mongodb+srv://djsmacker01:Fabulous01@cluster0.amspanf.mongo
                 .find()
                 .toArray()
                 .then(result => {
+                    res.render('index.ejs', { quotes: result })
                     console.log(result);
                 })
             .catch(err => console.error(err))
             // res.sendFile(__dirname + '/index.html');
-            res.render(view, locals)
         })
         
 //         app.get('/', () => {
