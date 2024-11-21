@@ -15,7 +15,9 @@ MongoClient.connect('mongodb+srv://djsmacker01:Fabulous01@cluster0.amspanf.mongo
         const db = client.db('star-wars-quotes')
         const quotesCollection = db.collection('quotes')
         
-     app.get('/', (req, res) => {
+        app.get('/', (req, res) => {
+            const cursor = db.collection('quotes').find()
+            console.log(cursor)
     res.sendFile(__dirname + '/index.html');
 })
 
