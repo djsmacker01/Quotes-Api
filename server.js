@@ -7,6 +7,7 @@ app.set('view engine', 'ejs');
 
 //Middleware
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'))
 
 
 const MongoClient = require('mongodb').MongoClient;
