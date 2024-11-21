@@ -6,9 +6,10 @@ const PORT = 3000
 app.set('view engine', 'ejs');
 
 //Middleware
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'))
-app.use(express.json());
+
 
 
 const MongoClient = require('mongodb').MongoClient;
@@ -44,6 +45,25 @@ app.post('/quotes', (req, res) => {
         })
     .catch(error => {console.error(error)});
 })
+        
+app.put('/quotes', (req,res) => {
+    // console.log(req.body)
+    quotesCollection
+        .findOneAndUpdate(
+            { name: 'Yoda' },
+            {
+                $set: {
+                    name: req.body.name,
+                    quote: req.body.value,
+                },
+            },
+            { upsert: true }
+    )
+        .then(res => { 
+            console.log(res)
+        })
+    .catch(error => {console.error(error)});
+})        
         
 app.listen(PORT, () => { 
     console.log(`Server is running at http://localhost:${PORT}`);
