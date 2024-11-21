@@ -41,7 +41,7 @@ app.post('/quotes', (req, res) => {
         .insertOne(req.body)
         .then(result => {
             res.redirect('/')
-        console.log(result)
+        // console.log(result)
         })
     .catch(error => {console.error(error)});
 })
