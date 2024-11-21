@@ -18,6 +18,13 @@ MongoClient.connect('mongodb+srv://djsmacker01:Fabulous01@cluster0.amspanf.mongo
         app.get('/', (req, res) => {
             // const cursor = db.collection('quotes').find()
             // console.log(cursor)
+            db.collection('quotes')
+                .find()
+                .toArray()
+                .then(result => {
+                    console.log(result);
+                })
+            .catch(err => console.error(err))
     res.sendFile(__dirname + '/index.html');
         })
         
