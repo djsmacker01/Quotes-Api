@@ -27,7 +27,8 @@ MongoClient.connect('mongodb+srv://djsmacker01:Fabulous01@cluster0.amspanf.mongo
                     console.log(result);
                 })
             .catch(err => console.error(err))
-    res.sendFile(__dirname + '/index.html');
+            // res.sendFile(__dirname + '/index.html');
+            res.render(view, locals)
         })
         
 //         app.get('/', () => {
