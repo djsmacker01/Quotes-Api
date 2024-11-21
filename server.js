@@ -60,7 +60,7 @@ app.put('/quotes', (req,res) => {
             { upsert: true }
     )
         .then(res => { 
-            console.log(res)
+            res.json('success')
         })
     .catch(error => {console.error(error)});
 })        
