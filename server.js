@@ -65,7 +65,12 @@ app.put('/quotes', (req,res) => {
     .catch(error => {console.error(error)});
 })
 app.delete('/quotes', (req,res) => {
-    
+    quotesCollection
+        .deleteOne(query, options)
+        .then(result => {
+            
+        })
+    .catch(error => {console.error(error)});
 })        
         
 app.listen(PORT, () => { 
