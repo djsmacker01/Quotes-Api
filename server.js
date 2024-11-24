@@ -63,6 +63,9 @@ app.put('/quotes', (req,res) => {
             res.json('success')
         })
     .catch(error => {console.error(error)});
+})
+app.delete('/quotes', (req,res) => {
+    
 })        
         
 app.listen(PORT, () => { 
