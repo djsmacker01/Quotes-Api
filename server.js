@@ -66,7 +66,7 @@ app.put('/quotes', (req,res) => {
 })
 app.delete('/quotes', (req,res) => {
     quotesCollection
-        .deleteOne(query, options)
+        .deleteOne({name: req.body.name}, options)
         .then(result => {
             
         })
