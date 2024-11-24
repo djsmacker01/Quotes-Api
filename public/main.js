@@ -18,3 +18,7 @@ update.addEventListener('click', _ => {
         })
   })
 })
+
+deleteBtn.addEventListener('click', () => { 
+  
+})
