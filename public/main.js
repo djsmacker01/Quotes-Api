@@ -26,11 +26,12 @@ deleteBtn.addEventListener('click', () => {
     body: JSON.stringify({
      name: 'Darth Vader'
     })
-      .then(res => {
+    
+  })
+    .then(res => {
       if(res.ok)return res.json()
       })
       .then(data => {
       window.location.reload()
-    })
   })
 })
