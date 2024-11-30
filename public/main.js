@@ -37,7 +37,7 @@ deleteBtn.addEventListener('click', () => {
           // messageBtn.textContent = 'No quote to delete'
       }
       else {
-        window.location.reload(true)
+        // window.location.reload(true)
       }
       
   })
